@@ -4,7 +4,7 @@
 > processes it at scale with Apache Spark, scores sentiment using FinBERT, and
 > correlates results with live stock price movements.
 
-![CI](https://github.com/atharvadalvi_07/financial-sentiment-pipeline/actions/workflows/ci.yml/badge.svg)
+[![CI](https://img.shields.io/badge/github-actions-blue?logo=github)](https://github.com/YOUR_USERNAME/financial-sentiment-pipeline/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![Spark](https://img.shields.io/badge/Apache%20Spark-3.x-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -26,7 +26,7 @@ individual tools, but the ability to compose them into a coherent, production-mi
 
 ## Sample Output
 
-![GOOGL Sentiment vs Price](assets/GOOGL_sentiment_chart.png)
+![TSLA Sentiment vs Price](assets/TSLA_sentiment_chart.png)
 ![MSFT Sentiment vs Price](assets/MSFT_sentiment_chart.png)
 
 ---
@@ -112,6 +112,7 @@ cd financial-sentiment-pipeline
 ### 2. Configure environment
 ```bash
 # Add your NewsAPI key to .env file after initilizing it
+NEWS_API_KEY = 'Your API key'
 ```
 
 ### 3. Start the stack
@@ -160,6 +161,7 @@ See [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 ## Tickers Covered
 
 `AAPL` · `MSFT` · `GOOGL` · `TSLA` · `AMZN`
+You can change the tickers to whatever you like
 
 ---
 
