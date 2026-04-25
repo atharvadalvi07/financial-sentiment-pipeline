@@ -26,7 +26,7 @@ individual tools, but the ability to compose them into a coherent, production-mi
 
 ## Sample Output
 
-![GOOGL Sentiment vs Price](assets/GOOGL_sentiment_chart.png)
+![TSLA Sentiment vs Price](assets/TSLA_sentiment_chart.png)
 ![MSFT Sentiment vs Price](assets/MSFT_sentiment_chart.png)
 
 ---
