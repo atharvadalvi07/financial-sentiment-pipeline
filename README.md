@@ -112,6 +112,7 @@ cd financial-sentiment-pipeline
 ### 2. Configure environment
 ```bash
 # Add your NewsAPI key to .env file after initilizing it
+NEWS_API_KEY = 'Your API key'
 ```
 
 ### 3. Start the stack
