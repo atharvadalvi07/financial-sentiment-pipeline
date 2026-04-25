@@ -8,14 +8,11 @@ from pyspark.sql.functions import (
 def run_processing(spark: SparkSession, input_path: str, output_path: str):
     df = spark.read.parquet(input_path)
 
-    # Dedup
     df = df.dropDuplicates(["url"])
 
-    # Null handling
-    df = df.dropna(subset=["title", "publishedAt", "ticker"])
+    df = df.dropna(subset=["title", "publishedAt", "ticker"])  ##handle null fields
     df = df.fillna({"description": "", "content": ""})
 
-    # Field selection — source already flat from Phase 2, no author field
     df = df.select(
         col("ticker"),
         col("title"),
@@ -40,7 +37,6 @@ def run_processing(spark: SparkSession, input_path: str, output_path: str):
         ).otherwise(lit(False))
     )
 
-    # Write partitioned by ticker for Phase 4 partition pruning
     df.write.mode("overwrite").partitionBy("ticker").parquet(output_path)
     return df
 
