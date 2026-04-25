@@ -4,7 +4,7 @@
 > processes it at scale with Apache Spark, scores sentiment using FinBERT, and
 > correlates results with live stock price movements.
 
-![CI](https://github.com/atharvadalvi_07/financial-sentiment-pipeline/actions/workflows/ci.yml/badge.svg)
+[![CI](https://img.shields.io/badge/github-actions-blue?logo=github)](https://github.com/YOUR_USERNAME/financial-sentiment-pipeline/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![Spark](https://img.shields.io/badge/Apache%20Spark-3.x-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
