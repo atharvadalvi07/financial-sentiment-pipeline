@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  spark-notebook:
+    image: jupyter/pyspark-notebook:latest
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+      - ./src:/home/jovyan/src
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - NEWS_API_KEY=${NEWS_API_KEY}
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
