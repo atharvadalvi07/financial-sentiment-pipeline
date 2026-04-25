@@ -161,6 +161,7 @@ See [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 ## Tickers Covered
 
 `AAPL` · `MSFT` · `GOOGL` · `TSLA` · `AMZN`
+You can change the tickers to whatever you like
 
 ---
 
